@@ -1474,6 +1474,7 @@ line-height:34px;
 right: 0px;
 position: absolute;
 }
+/*
 input[type=submit]
 {
 padding:4px 17px;
@@ -1487,6 +1488,7 @@ margin-top:10px;
 float:left;
 overflow:visible;
 }
+*/
 #searchform input[type=submit]:hover
 {
 background-color:#747474;

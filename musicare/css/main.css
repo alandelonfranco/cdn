@@ -1694,6 +1694,7 @@ margin-left: 98px;
 form {
   color: #999;
   width: 80%;
+  margin: 0 auto;
 }
 
 .contact-form-button-submit {

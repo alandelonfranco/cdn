@@ -736,8 +736,12 @@ span.xpose_meta a {
 color:#aaa !important;
 display:inline-block;
 }
-span.xpose_meta_date, span.xpose_meta_comment, span.xpose_meta_more  {
+span.xpose_meta_date, span.xpose_meta_comment  {
 display:inline-block;
+margin-right:8px;
+}
+span.xpose_meta_more {
+display:none;
 margin-right:8px;
 }
 span.xpose_meta_date:before {

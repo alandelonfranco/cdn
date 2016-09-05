@@ -1783,3 +1783,6 @@ form {
 .pesan {
   text-align: left;
 }
+iframe {
+	width: 90%;
+}

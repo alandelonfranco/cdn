@@ -741,8 +741,8 @@ display:inline-block;
 margin-right:8px;
 }
 span.xpose_meta_more {
-display:none;
-margin-right:8px;
+display: none;
+margin-right: 8px;
 }
 span.xpose_meta_date:before {
 content: "\f017";

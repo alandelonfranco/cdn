@@ -421,7 +421,7 @@ margin-top: -25px;
 .post-container {
 padding:15px 0px 0 0;
 }
-.breadcrumbs {font-size: 90%;height: 16px;margin-bottom: 10px;margin-top: 1px;overflow: hidden;padding: 5px;margin-left: -15px;}
+.breadcrumbs {font-size: 90%;height: auto;margin-bottom: 10px;margin-top: 1px;overflow: hidden;padding: 5px;margin-left: -15px;}
 .breadcrumbs > span {padding: 10px 5px 10px 10px;}
 .breadcrumbs > span:last-child {background: none repeat scroll 0 0 transparent;color: #808080;}
 .breadcrumbs a {color: #333333;}

@@ -226,7 +226,7 @@
         </div>
 
       </div>
-      {% if page.layout != "home" %}
+      {% if {{ page.title | escape }} != "THE Produções" %}
 
       {% else %}
       <!--<div class="live-video videosBackColor">
@@ -856,9 +856,7 @@
       }
       //$('#btn').click(function()
       $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
-            parseRSS();
-          }
+          parseRSS();
         });
       });
       $(function() {
@@ -971,9 +969,7 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
-            parseRSS();
-          }
+          parseRSS();
         });
       });
       $(function() {
@@ -1070,9 +1066,7 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
-            parseRSS();
-          }
+          parseRSS();
         });
       });
       $(function() {
@@ -1173,9 +1167,7 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
-            parseRSS();
-          }
+          parseRSS();
         });
       });
   </script>
@@ -1284,9 +1276,7 @@ $(function() {
   }
   //$('#btn').click(function()
   $(document).ready(function () {
-	if (window.location.href == "https://cdn.erivelton.com/") {
-		parseRSS();
-	}
+    parseRSS();
   });
 });
 </script>

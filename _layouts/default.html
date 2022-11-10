@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "pt-br" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'pt-br' }}">
 
   {% include head.html %}
 
@@ -7,7 +7,7 @@
 
     {% include header.html %}
 
-    {% if page.layout != "home" %}
+    {% if page.title != "THE Produções" %}
 
     {% else %}
     <div id="splide" class="splide">
@@ -789,7 +789,7 @@
        document.getElementsByTagName('head')[0].appendChild(script);
        a2a.init_all();
     </script>
-    {% if page.layout != "home" %}
+    {% if page.title != "THE Produções" %}
 
     {% else %}
     <script type="text/javascript">

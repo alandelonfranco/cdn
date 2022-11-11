@@ -68,7 +68,7 @@ to the `site_tags` variable. -->
       <div class="post-img">
         <a href="##Url##?ref=category">
         <figure>
-          <img data-src="##Image##" alt="##Title##" title="##Title##">
+          <img src="##Image##" alt="##Title##" title="##Title##">
         </figure>
         </a>
       </div>
@@ -80,7 +80,7 @@ to the `site_tags` variable. -->
           <a class="post-link" href="##Url##?ref=category">##Title##</a>
         </h2>
         <span class="post-meta">##Date##</span>
-        <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="##Url##" data-a2a-title="##Title##">
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="{{ site.url }}##Url##" data-a2a-title="##Title##">
             <a class="a2a_button_facebook"></a>
             <a class="a2a_button_twitter"></a>
             <a class="a2a_button_whatsapp"></a>

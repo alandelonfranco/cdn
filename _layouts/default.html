@@ -10,7 +10,7 @@
     {% if page.layout != "home" %}
 
     {% else %}
-    <div id="splide" class="splide">
+    <div id="splide" class="splide" style="display:none;">
       <div class="splide__track">
         <ul class="splide__list">
         </ul>
@@ -226,7 +226,7 @@
         </div>
 
       </div>
-      {% if {{ page.title | escape }} != "THE Produções" %}
+      {% if page.layout != "home" %}
 
       {% else %}
       <!--<div class="live-video videosBackColor">
@@ -251,109 +251,6 @@
       </div>
       <div class="container">
         <div class="news-items">
-          <div class="ph-item">
-              <div class="ph-col-4">
-                  <div class="ph-picture" style="height:200px;"></div>
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-4">
-                  <div class="ph-picture" style="height:200px;"></div>
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-4">
-                  <div class="ph-picture" style="height:200px;"></div>
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-12">
-                  <div class="ph-row">
-                      <div class="ph-col-12 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-picture" style="height:100px;"></div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                  <div class="ph-col-6 big"></div>
-                  <div class="ph-col-12 big"></div>
-                  <div class="ph-col-12 big"></div>
-                  <div class="ph-col-4"></div>
-                  <div class="ph-col-8 empty"></div>
-                  <div class="ph-col-6"></div>
-                  <div class="ph-col-6 empty"></div>
-                  <div class="ph-col-4"></div>
-                  <div class="ph-col-8 empty"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-picture" style="height:100px;"></div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                  <div class="ph-col-6 big"></div>
-                  <div class="ph-col-12 big"></div>
-                  <div class="ph-col-12 big"></div>
-                  <div class="ph-col-4"></div>
-                  <div class="ph-col-8 empty"></div>
-                  <div class="ph-col-6"></div>
-                  <div class="ph-col-6 empty"></div>
-                  <div class="ph-col-4"></div>
-                  <div class="ph-col-8 empty"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-picture" style="height:100px;"></div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                  <div class="ph-col-6 big"></div>
-                  <div class="ph-col-12 big"></div>
-                  <div class="ph-col-12 big"></div>
-                  <div class="ph-col-4"></div>
-                  <div class="ph-col-8 empty"></div>
-                  <div class="ph-col-6"></div>
-                  <div class="ph-col-6 empty"></div>
-                  <div class="ph-col-4"></div>
-                  <div class="ph-col-8 empty"></div>
-                </div>
-              </div>
-          </div>
         </div>
       </div>
       <!--<div class="videos videosBackColor">
@@ -363,10 +260,9 @@
         <div class="container" id="random_youtube_videos">
         </div>
       </div>-->
-      <div class="banner">
-        <img src="{{ "/assets/img/banner2.jpg" | relative_url }}">
+      <div class="banner" id="banner2">
       </div>
-      <div class="videos videosBackColor">
+      <div class="videos videosBackColor" id="patch-musics" style="display:none;">
         <div class="category">
           <em>músicas do patch</em>
         </div>
@@ -376,389 +272,13 @@
       </div>
       <div class="container news2">
         <div class="news2-items">
-          <div class="ph-item">
-              <div class="ph-col-4">
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-4">
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-4">
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-12">
-                  <div class="ph-row">
-                      <div class="ph-col-12 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-4">
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-4">
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-              <div class="ph-col-4">
-                  <div class="ph-row">
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-8 empty big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-12 big"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                      <div class="ph-col-6"></div>
-                      <div class="ph-col-6 empty"></div>
-                      <div class="ph-col-4"></div>
-                      <div class="ph-col-8 empty"></div>
-                  </div>
-              </div>
-          </div>
         </div>
       </div>
       <div class="container">
-        <div id="aiscore-free"></div><script language="javascript">document.getElementById("aiscore-free").innerHTML="<iframe src='https://www.aiscore.com/br?width=1200&theme=blue'  height='100%' width='1200' scrolling='auto' border='0' frameborder='0'></iframe>";</script><style>body{margin:0}#aiscore-free{display:flex;justify-content:center;height:100vh}</style>
+        <div id="aiscore-free" style="display:none;"></div><style>body{margin:0}#aiscore-free{display:flex;justify-content:center;height:100vh}</style>
       </div>
       <div class="container">
         <ul class="trends-items cloud">
-          <div class="ph-item">
-              <div class="ph-col-12">
-                  <div class="ph-row">
-                      <div class="ph-col-4 empty big"></div>
-                      <div class="ph-col-4 big"></div>
-                      <div class="ph-col-4 empty big"></div>
-                  </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-              <div class="ph-col-2">
-                <div class="ph-row">
-                    <div class="ph-col-12"></div>
-                </div>
-              </div>
-          </div>
         </ul>
       </div>
       <!--<div class="banner">
@@ -827,7 +347,7 @@
               var scc_image = $(this).find('enclosure').attr('url');
               if(scc_image != undefined && scc_link.includes("mma") != true && scc_link.includes("nfl") != true) {
               // Append elements to the new element
-              $build.append('<a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img class="lazy-slide" style="-webkit-filter:brightness(90%);filter:brightness(90%);-ms-transition:.5s;transition:.5s;animation:zoom-in-zoom-out 20s ease infinite" data-src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"><figcaption>'+scc_title+'</figcaption><div class="bgblur" style="position:absolute;left:0;right:0;z-index:-1;background-image:url('+scc_image+');background-size:cover;width:100%;height:100%;-webkit-filter:blur(10px);animation:zoom-in-zoom-out-bgslide 20s ease infinite;-moz-filter:blur(10px);-o-filter:blur(10px);-ms-filter:blur(10px);filter:blur(10px)"></div></figure></a>');
+              $build.append('<a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img class="lazy-slide" style="-webkit-filter:brightness(90%);filter:brightness(90%);-ms-transition:.5s;transition:.5s;animation:zoom-in-zoom-out 20s ease infinite" src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"><figcaption>'+scc_title+'</figcaption><div class="bgblur" style="position:absolute;left:0;right:0;z-index:-1;background-image:url('+scc_image+');background-size:cover;width:100%;height:100%;-webkit-filter:blur(10px);animation:zoom-in-zoom-out-bgslide 20s ease infinite;-moz-filter:blur(10px);-o-filter:blur(10px);-ms-filter:blur(10px);filter:blur(10px)"></div></figure></a>');
               // Append the new element to the container
               $('.slide-items').append($build);
               } else {
@@ -856,7 +376,9 @@
       }
       //$('#btn').click(function()
       $(document).ready(function () {
-          parseRSS();
+          if (window.location.href == "https://cdn.erivelton.com/") {
+            parseRSS();
+          }
         });
       });
       $(function() {
@@ -910,7 +432,7 @@
                     var scc_image = $(this).find('media\\:content').attr('url');
                     if(scc_image != undefined) {
                     // Append elements to the new element
-                    $build.append('<div class="post-img"><a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img data-src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"></figure></a></div><div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                    $build.append('<div class="post-img"><a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"></figure></a></div><div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
                     // Append the new element to the container
                     $('.news-items').append($build);
                     } else {
@@ -945,7 +467,7 @@
                 var scc_image = $(this).find('media\\:content').attr('url');
                 if(scc_image != undefined) {
                 // Append elements to the new element
-                $build.append('<div class="post-img"><a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img data-src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"></figure></a></div><div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                $build.append('<div class="post-img"><a href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'"><figure><img src="'+scc_image+'" alt="'+scc_title+'" title="'+scc_title+'"></figure></a></div><div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title+'">'+scc_title+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
                 // Append the new element to the container
                 $('.news-items').append($build);
                 } else {
@@ -969,7 +491,9 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          parseRSS();
+          if (window.location.href == "https://cdn.erivelton.com/") {
+            parseRSS();
+          }
         });
       });
       $(function() {
@@ -1066,7 +590,9 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          parseRSS();
+          if (window.location.href == "https://cdn.erivelton.com/") {
+            parseRSS();
+          }
         });
       });
       $(function() {
@@ -1122,7 +648,7 @@
                     //var scc_image = $(this).find('itunes\\:image').attr('href');
                     var scc_image = $(this).find('media\\:content').attr('url');
                     // Append elements to the new element
-                    $build.append('<div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title.slice(0,scc_titleReplaced)+'">'+scc_title.slice(0,scc_titleReplaced)+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                    $build.append('<div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title.slice(0,scc_titleReplaced)+'">'+scc_title.slice(0,scc_titleReplaced)+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title.slice(0,scc_titleReplaced)+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
                     // Append the new element to the container
                     $('.news2-items').append($build);
                   });
@@ -1151,7 +677,7 @@
                 //var scc_image = $(this).find('itunes\\:image').attr('href');
                 var scc_image = $(this).find('media\\:content').attr('url');
                 // Append elements to the new element
-                $build.append('<div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title.slice(0,scc_titleReplaced)+'">'+scc_title.slice(0,scc_titleReplaced)+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
+                $build.append('<div class="post-text"><div class="category"><em>'+scc_category+'</em></div><h2><a class="post-link" href="{{ "/redirect?=" | relative_url }}'+scc_link+'&?t='+scc_title.slice(0,scc_titleReplaced)+'">'+scc_title.slice(0,scc_titleReplaced)+'</a></h2><span class="post-meta">'+scc_date_format+'</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="'+scc_link+'" data-a2a-title="'+scc_title.slice(0,scc_titleReplaced)+'"> <a class="a2a_button_facebook"></a> <a class="a2a_button_twitter"></a> <a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div>');
                 // Append the new element to the container
                 $('.news2-items').append($build);
               });
@@ -1167,7 +693,9 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          parseRSS();
+          if (window.location.href == "https://cdn.erivelton.com/") {
+            parseRSS();
+          }
         });
       });
   </script>
@@ -1181,7 +709,7 @@
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
     resultsContainer: document.getElementById('results-container'),
-    searchResultTemplate: '<div class="post"><div class="post-img"><a href="{url}?ref=search"><figure><img src="{image}" alt="{title}" title="{title}" src="{image}"></figure></a></div><div class="post-text"><div class="category">{content}</div><h2><a class="post-link" href="{url}?ref=search">{title}</a></h2><span class="post-meta">{date}</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="{{ site.baseurl }}{url}" data-a2a-title="{title}"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div></div>',
+    searchResultTemplate: '<div class="post"><div class="post-img"><a href="{url}?ref=search"><figure><img src="{image}" alt="{title}" title="{title}" src="{image}"></figure></a></div><div class="post-text"><div class="category">{content}</div><h2><a class="post-link" href="{url}?ref=search">{title}</a></h2><span class="post-meta">{date}</span><div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="{{ site.url }}{url}" data-a2a-title="{title}"><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_whatsapp"></a><a class="a2a_button_telegram"></a></div></div></div>',
     noResultsText: '<span class="no-results">Nenhum resultado encontrado!</span>',
     json: '/feeds/feed.json'
   })
@@ -1276,8 +804,22 @@ $(function() {
   }
   //$('#btn').click(function()
   $(document).ready(function () {
-    parseRSS();
+    if (window.location.href == "https://cdn.erivelton.com/") {
+      parseRSS();
+      $(".splide").show();
+    }
   });
+});
+$(document).ready(function () {
+  if (window.location.href == "https://cdn.erivelton.com/") {
+    document.getElementById("banner2").innerHTML='<img src="{{ "/assets/img/banner2.jpg" | relative_url }}">';
+  }
+});
+$(document).ready(function () {
+  if (window.location.href == "https://cdn.erivelton.com/") {
+    document.getElementById("aiscore-free").innerHTML="<iframe src='https://www.aiscore.com/br?width=1200&theme=blue'  height='100%' width='1200' scrolling='auto' border='0' frameborder='0'></iframe>";
+    $("#aiscore-free").show();
+  }
 });
 </script>
 {% endif %}

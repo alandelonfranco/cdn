@@ -208,11 +208,11 @@ function showSearchResults(results) {
     // Add results HTML to placeholder
     $resultsPlaceholder.html(results);
 
-    var myLazyLoad = new LazyLoad({
-        threshold: 0
-    });
+    //var myLazyLoad = new LazyLoad({
+    //    threshold: 0
+    //});
     // After your content has changed...
-    myLazyLoad.update();
+    //myLazyLoad.update();
     a2a.init_all();
 }
 

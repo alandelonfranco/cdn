@@ -7,16 +7,6 @@
 
     {% include header.html %}
 
-    {% if page.layout != "home" %}
-
-    {% else %}
-    <div id="splide" class="splide" style="display:none;">
-      <div class="splide__track">
-        <ul class="splide__list">
-        </ul>
-      </div>
-    </div>
-    {% endif %}
     <main>
 
       {% if page.layout != "home" %}
@@ -751,65 +741,6 @@
 
 {% else %}
 <script type="text/javascript">
-$(function() {
-  function parseRSS(callback) {
-    var ts = (new Date()).getTime().toString().slice(0,6);
-    $.ajax({
-      //url: 'https://feeds.buzzsprout.com/1367764.rss',
-      //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
-      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.ogol.com.br%2Frss%2Fnoticias.php?='+ts,
-      cache: true,
-      //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
-      dataType: 'json',
-      error: function(e) {
-            console.log("XML reading Failed: ", e);        
-      },
-      success: function(response) {
-        //$('#ProductList').empty('');
-          //console.log(response);
-          var videoId = window.location.href.split('v=').pop();
-          json = response;
-          for (var i in json.items) {
-            var $build = $('<li class="splide__slide"></li>');
-              //var row = $('<tr>');
-              //row.append($('<td id=' + json[i].Id + '>').html(json[i].Id));
-              //row.append($('<td id=' + json[i].Name + '>').html(json[i].Name));
-              //$('</tr>');
-              //$('#ProductList').append(row);
-            //document.title = json[i].artist+' - '+json[i].music;
-            $build.append('<a href="{{ "/redirect?=" | relative_url }}'+json.items[i].link+'&?t='+json.items[i].title+'">'+json.items[i].title+'</a>');
-            // Append the new element to the container
-            $('.splide__list').append($build);
-          }
-//document.addEventListener( 'DOMContentLoaded', function() {
-  const HotTopics = document.getElementsByClassName("splide");
-  for (let i = 0; i < HotTopics.length; i++) {
-    new Splide( HotTopics[i], {
-    type   : 'loop',
-    drag   : 'free',
-    gap: '64px', 
-    arrows : false,
-    autoWidth: true,
-    pagination : false,
-    focus: 'center',
-    autoScroll: {
-      speed: 1.0,
-      rewind: true,
-    },
-    } ).mount( window.splide.Extensions );
-  }
-//} );
-      }
-    });
-  }
-  //$('#btn').click(function()
-  $(document).ready(function () {
-    if (window.location.href == "https://cdn.erivelton.com/") {
-      parseRSS();
-      $(".splide").show();
-    }
-  });
-});
 $(document).ready(function () {
   if (window.location.href == "https://cdn.erivelton.com/") {
     document.getElementById("banner2").innerHTML='<img src="{{ "/assets/img/banner2.jpg" | relative_url }}">';

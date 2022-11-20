@@ -78,7 +78,7 @@ $(function() {
           if (getWithExpiry("the-"+id) != null && user.channel == id) {
             var $build = $('<div class="live-chat"></div>');
             // Append elements to the new element
-            $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+user.value+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+            $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+user.value+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
             // Append the new element to the container
             $('.player').append($build);
             console.log(user.value);
@@ -185,7 +185,7 @@ $(function() {
                                                       // Build a new element
                                                       var $build = $('<div class="live-chat"></div>');
                                                       // Append elements to the new element
-                                                      $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                                                      $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                                                       // Append the new element to the container
                                                       $('.player').append($build);
                                                       console.log(json[i].id.videoId);
@@ -210,7 +210,7 @@ $(function() {
                                                   // Build a new element
                                                   var $build = $('<div class="live-chat"></div>');
                                                   // Append elements to the new element
-                                                  $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                                                  $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                                                   // Append the new element to the container
                                                   $('.player').append($build);
                                                   console.log(json[i].id.videoId);
@@ -235,7 +235,7 @@ $(function() {
                                               // Build a new element
                                               var $build = $('<div class="live-chat"></div>');
                                               // Append elements to the new element
-                                              $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                                              $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                                               // Append the new element to the container
                                               $('.player').append($build);
                                               console.log(json[i].id.videoId);
@@ -260,7 +260,7 @@ $(function() {
                                           // Build a new element
                                           var $build = $('<div class="live-chat"></div>');
                                           // Append elements to the new element
-                                          $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                                          $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                                           // Append the new element to the container
                                           $('.player').append($build);
                                           console.log(json[i].id.videoId);
@@ -285,7 +285,7 @@ $(function() {
                                       // Build a new element
                                       var $build = $('<div class="live-chat"></div>');
                                       // Append elements to the new element
-                                      $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                                      $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                                       // Append the new element to the container
                                       $('.player').append($build);
                                       console.log(json[i].id.videoId);
@@ -310,7 +310,7 @@ $(function() {
                                   // Build a new element
                                   var $build = $('<div class="live-chat"></div>');
                                   // Append elements to the new element
-                                  $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                                  $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                                   // Append the new element to the container
                                   $('.player').append($build);
                                   console.log(json[i].id.videoId);
@@ -335,7 +335,7 @@ $(function() {
                               // Build a new element
                               var $build = $('<div class="live-chat"></div>');
                               // Append elements to the new element
-                              $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                              $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                               // Append the new element to the container
                               $('.player').append($build);
                               console.log(json[i].id.videoId);
@@ -360,7 +360,7 @@ $(function() {
                           // Build a new element
                           var $build = $('<div class="live-chat"></div>');
                           // Append elements to the new element
-                          $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                          $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                           // Append the new element to the container
                           $('.player').append($build);
                           console.log(json[i].id.videoId);
@@ -385,7 +385,7 @@ $(function() {
                       // Build a new element
                       var $build = $('<div class="live-chat"></div>');
                       // Append elements to the new element
-                      $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                      $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                       // Append the new element to the container
                       $('.player').append($build);
                       console.log(json[i].id.videoId);
@@ -410,7 +410,7 @@ $(function() {
                   // Build a new element
                   var $build = $('<div class="live-chat"></div>');
                   // Append elements to the new element
-                  $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=cdn.erivelton.com&amp;dark_theme=1"></iframe>');
+                  $build.append('<iframe width="420" height="345" frameborder="0" src="https://www.youtube.com/live_chat?v='+json[i].id.videoId+'&amp;embed_domain=localhost&amp;dark_theme=1"></iframe>');
                   // Append the new element to the container
                   $('.player').append($build);
                   console.log(json[i].id.videoId);

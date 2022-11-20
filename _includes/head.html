@@ -17,7 +17,7 @@
   <!--<link rel="prefetch" href="https://www.espn.com.br/rss" as="fetch">-->
   <link rel="prefetch" href="https://srv2.weatherwidget.org/js/?id=ww_50cbfdb269e0c" as="script">
   <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" as="script">
-  <link rel="prefetch" href="{{ "/assets/js/slick.min.js?ver=5.9.3" | relative_url }}" as="script">
+  <link rel="prefetch" href="{{ "/assets/js/slick-slider.js" | relative_url }}" as="script">
   <link rel="prefetch" href="{{ "/assets/js/turbolinks.min.js" | relative_url }}" as="script">
   <link rel="prefetch" href="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js" as="script">
   <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.12/dist/js/lightgallery.min.js" as="script">
@@ -27,7 +27,7 @@
   <link rel="prefetch" href="{{ "/feeds/feed.json" | relative_url }}" as="fetch">
   <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/lg-thumbnail/1.1.0/lg-thumbnail.min.js" as="script">
   <link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.1.0/lg-fullscreen.min.js" as="script">
-  <link rel="preconnect" href="//www.tickcounter.com/widget/countdown/3446375">
+  <link rel="preconnect" href="https://www.aiscore.com">
   <link rel="preconnect" href="https://api.allorigins.win">
   <link rel="preconnect" href="https://www.youtube.com">
 <link rel="preconnect" href="https://i.ytimg.com">
@@ -41,11 +41,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/placeholder-loading/dist/css/placeholder-loading.min.css">
-  <link rel="stylesheet" href="{{ "/assets/style.css?=v7" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/style.css?=v9" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/splide.min.css" | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script async src="{{ "/assets/js/slick.min.js?ver=5.9.3" | relative_url }}" data-turbolinks-eval=false></script>
+  <script async src="{{ "/assets/js/slick-slider.js" | relative_url }}" data-turbolinks-eval=false></script>
+  <script async src="{{ "/assets/js/splide.min.js" | relative_url }}" id='splide-js' data-turbolinks-eval=false></script>
+  <script async src="{{ "/assets/js/splide-extension-auto-scroll.min.js" | relative_url }}" id='splide-extension-js' data-turbolinks-eval=false></script>
 
   <script defer src="{{ "/assets/js/jquery.simpleLoadMore.min.js" | relative_url }}"></script>
 
@@ -483,20 +486,6 @@ html.turbolinks-progress-bar::before {
     }
   </style>
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://theproducoes.github.io/">
-<meta property="og:title" content="THE Produções">
-<meta property="og:description" content="Atualizações para FIFA 08.">
-<meta property="og:image" content="{{ "/assets/img/theproducoes.jpg" | relative_url }}">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://theproducoes.github.io/">
-<meta property="twitter:title" content="THE Produções">
-<meta property="twitter:description" content="Atualizações para FIFA 08.">
-<meta property="twitter:image" content="{{ "/assets/img/theproducoes.jpg" | relative_url }}">
-
   <script async src="{{ "/assets/js/turbolinks.min.js" | prepend: site.baseurl }}" data-turbolinks-eval=false></script>
 
   <!--<script type="text/javascript" src="https://rss2json.com/gfapi.js"></script>
@@ -687,6 +676,7 @@ setUpProgressBar("#"+liveTitle.replace(/[^a-zA-Z0-9]/g, ''), start2.getTime(), e
       }
 
     }
+    /*
     function liveVivaOEsporte()
     {
     var setdate = new Date().toLocaleString('en-US', {timeZone: 'America/Fortaleza', hourCycle: 'h23'});
@@ -788,7 +778,6 @@ setUpProgressBar("#"+liveTitle.replace(/[^a-zA-Z0-9]/g, ''), start2.getTime(), e
       }
 
     }
-    /*
     function liveG4BandSports()
     {
     var setdate = new Date().toLocaleString('en-US', {timeZone: 'America/Fortaleza', hourCycle: 'h23'});
@@ -1274,9 +1263,9 @@ setUpProgressBar("#"+liveTitle.replace(/[^a-zA-Z0-9]/g, ''), start2.getTime(), e
       count: 64,
       btnHTML: '<span class="load-more"><a href="#" class="load-more__btn">Ver mais <i class="fas fa-angle-down"></i></a></span>'
     });
-    if (window.location.href == "https://cdn.erivelton.com/") {
+    if (window.location.href == "{{ site.url }}/") {
       liveJogoAberto();
-      liveVivaOEsporte();
+      //liveVivaOEsporte();
       //liveG4BandSports();
       liveOsDonosDaBola();
       //liveEsporteTotal();
@@ -1324,15 +1313,16 @@ setUpProgressBar("#"+liveTitle.replace(/[^a-zA-Z0-9]/g, ''), start2.getTime(), e
   $(document).on('page:load', function(event) {
     Turbolinks.ProgressBar.advanceTo(100);
     Turbolinks.ProgressBar.done();
-    if (window.location.href == "https://cdn.erivelton.com/") {
+    if (window.location.href == "{{ site.url }}/") {
       liveJogoAberto();
-      liveVivaOEsporte();
+      //liveVivaOEsporte();
       //liveG4BandSports();
       liveOsDonosDaBola();
       //liveEsporteTotal();
       liveTerceiroTempo();
       //liveSuperCopaDaUefa();
     }
+    //quicklink.listen();
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -1422,23 +1412,18 @@ function getWithExpiry(key) {
 
                     counter++;
                 }
-                var myLazyLoad = new LazyLoad({
-                  threshold: 0
-                });
-                // After your content has changed...
-                myLazyLoad.update();
             }
         });
     }
 
     $(document).ready(function() {
-      if (window.location.href == "https://cdn.erivelton.com/") {
+      if (window.location.href == "{{ site.url }}/") {
         generateRandomPosts();
         $("#patch-musics").show();
       }
     });
     $(document).on('page:load', function() {
-        if (window.location.href == "https://cdn.erivelton.com/") {
+        if (window.location.href == "{{ site.url }}/") {
           generateRandomPosts();
           $("#patch-musics").show();
         }
@@ -1483,11 +1468,6 @@ function getWithExpiry(key) {
 
                     counter++;
                 }
-                var myLazyLoad = new LazyLoad({
-                  threshold: 0
-                });
-                // After your content has changed...
-                myLazyLoad.update();
             }
         });
     }

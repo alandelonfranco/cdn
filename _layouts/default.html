@@ -7,6 +7,16 @@
 
     {% include header.html %}
 
+    {% if page.layout != "home" %}
+
+    {% else %}
+    <div id="splide" class="splide" style="display:none;">
+      <div class="splide__track">
+        <ul class="splide__list">
+        </ul>
+      </div>
+    </div>
+    {% endif %}
     <main>
 
       {% if page.layout != "home" %}
@@ -117,7 +127,7 @@
               <!--<div class="card-title">
                 <h3>Elencos Atualizados</h3>
               </div>-->
-              <div id="scoreaxis-widget-29566" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:10px;background:rgb(255, 255, 255);width:100%" data-reactroot=""><iframe id="Iframe" src="https://www.scoreaxis.com/widget/standings-widget/648?widgetRows=1%2C1%2C1%2C1%2C1%2C1%2C0%2C0%2C0%2C1&amp;widgetHomeAwayTabs=0&amp;links=0&amp;fontSize=18&amp;lang=pt&amp;font=6&amp;removeBorders=1&amp;header=1&amp;inst=29566" style="width:100%;height:743px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"29566"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-29566 iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
+              <div id="scoreaxis-widget-29566" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:10px;background:rgb(255, 255, 255);width:100%" data-reactroot=""><iframe id="Iframe" src="https://www.scoreaxis.com/widget/standings-widget/732?widgetRows=1%2C1%2C1%2C1%2C1%2C1%2C0%2C0%2C0%2C1&amp;widgetHomeAwayTabs=0&amp;links=0&amp;fontSize=18&amp;lang=pt&amp;font=6&amp;removeBorders=1&amp;header=1&amp;inst=29566" style="width:100%;height:743px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"29566"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-29566 iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
               <!--<div class="card-subtitle">
                 <h4>Brasileirão 2020</h4>
               </div>-->
@@ -150,7 +160,7 @@
               </div>
             </div>-->
             <div class="card">
-              <div id="scoreaxis-widget-d8f7b" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:10px;background:rgb(255, 255, 255);width:100%"><iframe id="Iframe" src="https://www.scoreaxis.com/widget/league-top-players/648?autoHeight=1&amp;links=0&amp;playersNumber=10&amp;lang=pt&amp;font=6&amp;fontSize=16&amp;inst=d8f7b" style="width:100%;height:781px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"d8f7b"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-d8f7b iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
+              <div id="scoreaxis-widget-d8f7b" style="border-width:0px;border-color:rgba(0, 0, 0, 0.15);border-style:solid;border-radius:0px;padding:10px;background:rgb(255, 255, 255);width:100%"><iframe id="Iframe" src="https://www.scoreaxis.com/widget/league-top-players/732?autoHeight=1&amp;links=0&amp;playersNumber=10&amp;lang=pt&amp;font=6&amp;fontSize=16&amp;inst=d8f7b" style="width:100%;height:781px;border:none;transition:all 300ms ease"></iframe><script>window.addEventListener("DOMContentLoaded",event=>{window.addEventListener("message",event=>{if(event.data.appHeight&&"d8f7b"==event.data.inst){let container=document.querySelector("#scoreaxis-widget-d8f7b iframe");container&&(container.style.height=parseInt(event.data.appHeight)+"px")}},!1)});</script></div>
             </div>
             <!--<div class="card">
               <div class="card-title">
@@ -204,14 +214,14 @@
                 {% endif %}
               </div>
             </div>-->
-            <div class="card fb-page">
-              <!--<div class="card-title">
+            <!--<div class="card fb-page">
+              <div class="card-title">
                 <h3>Página no Facebook</h3>
-              </div>-->
+              </div>
               <div class="card-content fb-page">
                 <iframe id="Iframefb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftheproducoes&tabs=timeline&width=355&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="width:100%;height:500px;border:none;transition:all 300ms ease"></iframe>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
 
@@ -354,19 +364,12 @@
                   });
                   $('.slide-item').show();
                   //console.log('Onload disparado');
-                  var myLazyLoad = new LazyLoad({
-                    elements_selector: ".lazy-slide",
-                    threshold: 0
-                  });
-                  // After your content has changed...
-                  myLazyLoad.loadAll();
-                  myLazyLoad.update();
           }
         });
       }
       //$('#btn').click(function()
       $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
+          if (window.location.href == "{{ site.url }}/") {
             parseRSS();
           }
         });
@@ -429,11 +432,6 @@
                       //for unsold properties
                     }
                   });
-                  var myLazyLoad = new LazyLoad({
-                    threshold: 0
-                  });
-                  // After your content has changed...
-                  myLazyLoad.update();
                   a2a.init_all();
                 }
               });
@@ -464,11 +462,6 @@
                   //for unsold properties
                 }
               });
-              var myLazyLoad = new LazyLoad({
-                threshold: 0
-              });
-              // After your content has changed...
-              myLazyLoad.update();
               a2a.init_all();
               const item = {
                 value: 0,
@@ -481,7 +474,7 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
+          if (window.location.href == "{{ site.url }}/") {
             parseRSS();
           }
         });
@@ -580,7 +573,7 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
+          if (window.location.href == "{{ site.url }}/") {
             parseRSS();
           }
         });
@@ -683,7 +676,7 @@
         }
         //$('#btn').click(function()
         $(document).ready(function () {
-          if (window.location.href == "https://cdn.erivelton.com/") {
+          if (window.location.href == "{{ site.url }}/") {
             parseRSS();
           }
         });
@@ -741,13 +734,87 @@
 
 {% else %}
 <script type="text/javascript">
-$(document).ready(function () {
-  if (window.location.href == "https://cdn.erivelton.com/") {
-    document.getElementById("banner2").innerHTML='<img src="{{ "/assets/img/banner2.jpg" | relative_url }}">';
+$(function() {
+  function parseRSS(callback) {
+    var ts = (new Date()).getTime().toString().slice(0,6);
+    $.ajax({
+      //url: 'https://feeds.buzzsprout.com/1367764.rss',
+      //url: 'https://corsanywhere.herokuapp.com/https://tntsports.com.br/rss/feed.xml',
+      url: 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.ogol.com.br%2Frss%2Fnoticias.php?='+ts,
+      cache: true,
+      //url: 'https://thingproxy.freeboard.io/fetch/https://tntsports.com.br/rss/feed.xml',
+      dataType: 'json',
+      error: function(e) {
+            console.log("XML reading Failed: ", e);        
+      },
+      success: function(response) {
+        //$('#ProductList').empty('');
+          //console.log(response);
+          json = response;
+          for (var i in json.items) {
+            var $build = $('<li class="splide__slide"></li>');
+              //var row = $('<tr>');
+              //row.append($('<td id=' + json[i].Id + '>').html(json[i].Id));
+              //row.append($('<td id=' + json[i].Name + '>').html(json[i].Name));
+              //$('</tr>');
+              //$('#ProductList').append(row);
+            //document.title = json[i].artist+' - '+json[i].music;
+            $build.append('<a href="{{ "/redirect?=" | relative_url }}'+json.items[i].link+'&?t='+json.items[i].title+'">'+json.items[i].title+'</a>');
+            // Append the new element to the container
+            $('.splide__list').append($build);
+          }
+//document.addEventListener( 'DOMContentLoaded', function() {
+  const HotTopics = document.getElementsByClassName("splide");
+  for (let i = 0; i < HotTopics.length; i++) {
+    new Splide( HotTopics[i], {
+    type   : 'loop',
+    drag   : 'free',
+    gap: '64px', 
+    arrows : false,
+    autoWidth: true,
+    pagination : false,
+    focus: 'center',
+    autoScroll: {
+      speed: 1.0,
+      rewind: true,
+    },
+    } ).mount( window.splide.Extensions );
   }
+//} );
+      }
+    });
+  }
+  //$('#btn').click(function()
+  $(document).ready(function () {
+    function resizeForm(){
+      var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth;
+      if(width > 1024 && window.location.href == "{{ site.url }}/"){
+          parseRSS();
+          $(".splide").show();
+      } else {
+        $(".splide").remove();
+      }
+      if(width <= 500){
+          $("#column-right").remove();
+      }
+    }
+    window.onresize = resizeForm;
+    resizeForm();
+  });
 });
 $(document).ready(function () {
-  if (window.location.href == "https://cdn.erivelton.com/") {
+  if (window.location.href == "{{ site.url }}/") {
+    document.getElementById("tour_schedule").innerHTML="<iframe src='https://www.aiscore.com/en/tournament-fifa-world-cup/p0ndkz6izigq3z1/schedule?isplugin=true'  height='1020' width='100%' scrolling='auto' border='0' frameborder='0'></iframe>";
+    $("#banner").show();
+  }
+});
+/*$(document).ready(function () {
+  if (window.location.href == "{{ site.url }}/") {
+    document.getElementById("banner2").innerHTML='<img src="{{ "/assets/img/banner2.jpg" | relative_url }}">';
+  }
+});*/
+$(document).ready(function () {
+  if (window.location.href == "{{ site.url }}/") {
     document.getElementById("aiscore-free").innerHTML="<iframe src='https://www.aiscore.com/br?width=1200&theme=blue'  height='100%' width='1200' scrolling='auto' border='0' frameborder='0'></iframe>";
     $("#aiscore-free").show();
   }
@@ -765,6 +832,9 @@ $(document).ready(function () {
   </script>-->
   <script defer src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js" data-turbolinks-eval=false></script>
   <script>
+  window.addEventListener('load', () => {
+    quicklink.listen();
+  });
   party.confetti(runButton, {
     count: party.variation.range(20, 40),
   });
